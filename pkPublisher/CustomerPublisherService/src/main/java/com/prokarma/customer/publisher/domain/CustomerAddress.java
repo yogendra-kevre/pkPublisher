@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
  * CustomerAddress
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-08-26T17:19:26.730Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-09-01T09:34:50.214Z")
 
 
 public class CustomerAddress   {

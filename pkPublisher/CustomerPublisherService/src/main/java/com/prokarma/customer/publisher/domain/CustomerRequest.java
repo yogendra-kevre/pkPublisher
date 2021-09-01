@@ -6,17 +6,17 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import org.springframework.validation.annotation.Validated;
-import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Request
+ * CustomerRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-08-26T17:19:26.730Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-09-01T09:43:47.328Z")
 
 
 public class CustomerRequest   {
@@ -30,7 +30,7 @@ public class CustomerRequest   {
   private String lastName = null;
 
   @JsonProperty("birthdate")
-  private OffsetDateTime birthdate = null;
+  private LocalDate birthdate = null;
 
   @JsonProperty("country")
   private String country = null;
@@ -148,7 +148,7 @@ public class CustomerRequest   {
     this.lastName = lastName;
   }
 
-  public CustomerRequest birthdate(OffsetDateTime birthdate) {
+  public CustomerRequest birthdate(LocalDate birthdate) {
     this.birthdate = birthdate;
     return this;
   }
@@ -162,11 +162,11 @@ public class CustomerRequest   {
 
   @Valid
 
-  public OffsetDateTime getBirthdate() {
+  public LocalDate getBirthdate() {
     return birthdate;
   }
 
-  public void setBirthdate(OffsetDateTime birthdate) {
+  public void setBirthdate(LocalDate birthdate) {
     this.birthdate = birthdate;
   }
 
@@ -245,7 +245,7 @@ public class CustomerRequest   {
   @ApiModelProperty(example = "abc@gmail.com", required = true, value = "")
   @NotNull
 
-
+@Size(max=50) 
   public String getEmail() {
     return email;
   }
@@ -306,17 +306,17 @@ public class CustomerRequest   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CustomerRequest request = (CustomerRequest) o;
-    return Objects.equals(this.customerNumber, request.customerNumber) &&
-        Objects.equals(this.firstName, request.firstName) &&
-        Objects.equals(this.lastName, request.lastName) &&
-        Objects.equals(this.birthdate, request.birthdate) &&
-        Objects.equals(this.country, request.country) &&
-        Objects.equals(this.countryCode, request.countryCode) &&
-        Objects.equals(this.mobileNumber, request.mobileNumber) &&
-        Objects.equals(this.email, request.email) &&
-        Objects.equals(this.customerStatus, request.customerStatus) &&
-        Objects.equals(this.address, request.address);
+    CustomerRequest customerRequest = (CustomerRequest) o;
+    return Objects.equals(this.customerNumber, customerRequest.customerNumber) &&
+        Objects.equals(this.firstName, customerRequest.firstName) &&
+        Objects.equals(this.lastName, customerRequest.lastName) &&
+        Objects.equals(this.birthdate, customerRequest.birthdate) &&
+        Objects.equals(this.country, customerRequest.country) &&
+        Objects.equals(this.countryCode, customerRequest.countryCode) &&
+        Objects.equals(this.mobileNumber, customerRequest.mobileNumber) &&
+        Objects.equals(this.email, customerRequest.email) &&
+        Objects.equals(this.customerStatus, customerRequest.customerStatus) &&
+        Objects.equals(this.address, customerRequest.address);
   }
 
   @Override
@@ -327,7 +327,7 @@ public class CustomerRequest   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Request {\n");
+    sb.append("class CustomerRequest {\n");
     
     sb.append("    customerNumber: ").append(toIndentedString(customerNumber)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");

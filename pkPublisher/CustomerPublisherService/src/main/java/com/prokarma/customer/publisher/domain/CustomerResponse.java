@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Response
+ * CustomerResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-08-26T17:19:26.730Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-09-01T09:34:50.214Z")
 
 
 public class CustomerResponse   {
@@ -19,7 +19,6 @@ public class CustomerResponse   {
 
   @JsonProperty("message")
   private String message = null;
-
 
   public CustomerResponse status(String status) {
     this.status = status;
@@ -72,9 +71,9 @@ public class CustomerResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CustomerResponse response = (CustomerResponse) o;
-    return Objects.equals(this.status, response.status) &&
-        Objects.equals(this.message, response.message);
+    CustomerResponse customerResponse = (CustomerResponse) o;
+    return Objects.equals(this.status, customerResponse.status) &&
+        Objects.equals(this.message, customerResponse.message);
   }
 
   @Override
@@ -85,7 +84,7 @@ public class CustomerResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Response {\n");
+    sb.append("class CustomerResponse {\n");
     
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
